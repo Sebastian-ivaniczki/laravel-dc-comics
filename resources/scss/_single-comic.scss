@@ -37,7 +37,7 @@
                 justify-content: space-between;
                 padding: 5px;
                 background-color: #55BA59;
-                border: 1px solid black;
+                border: 1px solid$light-black;
                 color: #BAF980;
                 margin: 10px 0;
 
@@ -46,7 +46,7 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    border-right: 1px solid black;
+                    border-right: 1px solid $light-black;
                     padding: 10px 20px;
 
                     .comic-price {
@@ -84,7 +84,7 @@
                 }
 
                 address {
-                    color: blue;
+                    color: $primary;
                 }
 
 
