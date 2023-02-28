@@ -53,6 +53,7 @@ ul {
             &:hover {
                 color: $primary;
                 border-bottom: 3px solid $primary;
+                padding-bottom: 36px;
             }
 
             &.active {
