@@ -1,0 +1,7 @@
+@extends('layouts.app')
+
+@section('title', 'Games')
+
+@section('content')
+    <h1 style="text-align: center; padding: 20px 0">gaasgasf</h1>
+@endsection
