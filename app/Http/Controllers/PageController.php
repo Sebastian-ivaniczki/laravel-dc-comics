@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -16,11 +17,6 @@ class PageController extends Controller
         return view('characters');
     }
 
-    public function comics()
-    {
-        $comics = config('comics');
-        return view('comics', ['comics' => $comics]);
-    }
 
     public function movies()
     {
