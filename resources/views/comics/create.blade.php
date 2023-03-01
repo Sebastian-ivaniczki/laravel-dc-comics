@@ -3,8 +3,8 @@
 @section('title', 'Fans')
 
 @section('content')
-    <div class="container">
-        <form action="">
+    <div class="container my-5">
+        <form action="{{ route('comics.store') }}" method="POST">
             @csrf
             <div class="row">
                 <div class="col-6">
@@ -86,7 +86,9 @@
                 </div>
             </div>
 
-
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-success">Add Comic</button>
+            </div>
         </form>
     </div>
 
