@@ -23,20 +23,32 @@
                     </div>
                 </div>
 
-                <div class="col-6">
+                <div class="col-4">
                     <div class="mb-3">
                         <label for="type" class="form-label">Type</label>
                         <input type="text" class="form-control" id="type" name="type">
 
                     </div>
                 </div>
+                {{-- cover --}}
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="mb-3">
+                                <label for="thumb" class="form-label">Comic cover</label>
+                                <input type="url" class="form-control" id="thumb" name="thumb">
 
-                <div class="col-6">
-                    <div class="mb-3">
-                        <label for="thumb" class="form-label">Comic cover</label>
-                        <input type="url" class="form-control" id="thumb" name="thumb">
+                            </div>
+                        </div>
 
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <h6>preview</h6>
+                                <img id="preview" src="" alt="place-holder" style="width: 70px">
+                            </div>
+                        </div>
                     </div>
+
                 </div>
 
 
@@ -92,4 +104,18 @@
         </form>
     </div>
 
+@endsection
+
+
+@section('scripts')
+    <script>
+        const placeholder = "https://marcolanci.it/utils/placeholder.jpg";
+        const comicCover = document.getElementById("thumb");
+        const preview = document.getElementById("preview");
+
+        comicCover.addEventListener('input', () => {
+            const url = comicCover.value;
+            preview.src = url ? url : placeholder;
+        });
+    </script>
 @endsection
