@@ -16,7 +16,7 @@
                                 <img src="{{ $comic['thumb'] }}" alt="{{ $comic['title'] }}">
 
                             </a>
-                            <h6>{{ $comic['series'] }}</h6>
+                            <h6>{{ $comic['title'] }}</h6>
                         </div>
                     @endforeach
                 </div>
