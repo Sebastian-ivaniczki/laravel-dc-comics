@@ -10,7 +10,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="title" class="form-label">Comic Name</label>
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Comic Name">
+                        <input type="text" class="form-control" id="title" name="title">
 
                     </div>
                 </div>
