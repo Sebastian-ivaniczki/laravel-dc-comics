@@ -34,7 +34,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="thumb" class="form-label">Comic cover</label>
-                        <input type="text" class="form-control" id="thumb" name="thumb">
+                        <input type="url" class="form-control" id="thumb" name="thumb">
 
                     </div>
                 </div>
