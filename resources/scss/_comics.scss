@@ -50,7 +50,10 @@
             padding: 8px 30px;
             background-color: $primary;
             border: transparent;
-            color: white;
+            a{
+                color: white;
+
+            }
         }
     }
 }
