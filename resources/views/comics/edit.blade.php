@@ -1,17 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Fans')
+@section('title', $comic->title)
 
 @section('content')
     <div class="container my-5">
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form method="POST" action="{{ route('comics.update', $comic->id) }}">
+            @method('PUT')
             @csrf
             <div class="row">
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="title" class="form-label">Comic Name</label>
-                        <input type="text" class="form-control" id="title" name="title" placeholder="title"
-                            value="{{ old('title') }}">
+                        <input type="text" class="form-control" id="title" name="title"
+                            value="{{ old('title', $comic->title) }}">
 
                     </div>
                 </div>
@@ -20,7 +21,7 @@
                     <div class="mb-3">
                         <label for="series" class="form-label">Series</label>
                         <input type="text" class="form-control" id="series" name="series"
-                            value="{{ old('series') }}">
+                            value="{{ old('series', $comic->series) }}">
 
                     </div>
                 </div>
@@ -29,7 +30,7 @@
                     <div class="mb-3">
                         <label for="type" class="form-label">Type</label>
                         <input type="text" class="form-control" id="type" name="type"
-                            value="{{ old('type') }}">
+                            value="{{ old('type', $comic->type) }}">
 
                     </div>
                 </div>
@@ -40,7 +41,7 @@
                             <div class="mb-3">
                                 <label for="thumb" class="form-label">Comic cover</label>
                                 <input type="url" class="form-control" id="thumb" name="thumb"
-                                    value="{{ old('thumb') }}">
+                                    value="{{ old('thumb', $comic->thumb) }}">
 
                             </div>
                         </div>
@@ -60,7 +61,7 @@
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
                         <input type="text" class="form-control" id="price" name="price"
-                            value="{{ old('price') }}">
+                            value="{{ old('price', $comic->price) }}">
 
                     </div>
                 </div>
@@ -69,7 +70,7 @@
                     <div class="mb-3">
                         <label for="sale_date" class="form-label">Date Of Sale</label>
                         <input type="text" class="form-control" id="sale_date" name="sale_date"
-                            value="{{ old('dale_date') }}">
+                            value="{{ old('dale_date', $comic->sale_date) }}">
 
                     </div>
                 </div>
@@ -79,7 +80,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="artists" class="form-label">Artists</label>
-                        <textarea type="textarea" id="artists" name="artists" class="form-control">{{ old('artists') }}</textarea>
+                        <textarea type="textarea" id="artists" name="artists" class="form-control">{{ old('artists', $comic->artists) }}</textarea>
 
                     </div>
                 </div>
@@ -87,7 +88,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="writers" class="form-label">Writers</label>
-                        <textarea type="textarea" id="writers" name="writers" class="form-control">{{ old('writers') }}</textarea>
+                        <textarea type="textarea" id="writers" name="writers" class="form-control">{{ old('writers', $comic->writers) }}</textarea>
 
                     </div>
                 </div>
@@ -98,7 +99,7 @@
                 <div class="col-12">
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <textarea type="textarea" id="description" name="description" class="form-control">{{ old('writers') }}</textarea>
+                        <textarea type="textarea" id="description" name="description" class="form-control">{{ old('description', $comic->description) }}</textarea>
 
                     </div>
                 </div>

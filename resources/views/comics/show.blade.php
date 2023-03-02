@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Games')
+@section('title', $comic->title)
 
 @section('content')
     <section id="comics-detail" class="container">
@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col-content">
-                {{-- TITOLE --}}
+                {{-- TITLE --}}
                 <h1>{{ $comic->title }}</h1>
 
                 {{-- PRICE BOX --}}
@@ -30,11 +30,7 @@
 
             </div>
 
-            {{-- ADVERTISEMENT --}}
-            <div class="col-advertisement">
-                <h4>ADVERTISEMENT</h4>
-                <img src="{{ Vite::asset('resources/images/adv.jpg') }}" alt="Advertisement">
-            </div>
+
         </div>
 
         <div class="row">
@@ -60,6 +56,11 @@
                     <div class="series"><strong>U.S.Price: </strong> {{ $comic->price }}</div>
                     <div class="series"><strong>Series : </strong>{{ $comic->sale_date }}</div>
                 </div>
+            </div>
+
+            <div>
+                <a href="{{ route('comics.edit', $comic->id) }}">Edit Comic</a>
+
             </div>
         </div>
     @endsection
