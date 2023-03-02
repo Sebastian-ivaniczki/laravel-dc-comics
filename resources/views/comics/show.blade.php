@@ -59,7 +59,7 @@
             </div>
 
             <div>
-                <a href="{{ route('comics.edit', $comic->id) }}">Edit Comic</a>
+                <a class="btn btn-primary" href="{{ route('comics.edit', $comic->id) }}">Edit Comic</a>
 
             </div>
         </div>
