@@ -58,9 +58,15 @@
                 </div>
             </div>
 
-            <div>
-                <a class="btn btn-primary" href="{{ route('comics.edit', $comic->id) }}">Edit Comic</a>
+            <div class="d-flex ">
+                <button class="btn btn-primary"><a style="color:#fff" href="{{ route('comics.edit', $comic->id) }}">Edit
+                        Comic</a> </button>
 
+                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-danger ms-3">Delete Comic</button>
+                </form>
             </div>
         </div>
     @endsection

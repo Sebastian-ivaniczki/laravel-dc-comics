@@ -24,6 +24,7 @@ Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show'
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
 Route::get('/comics/{id}/edit', [ComicController::class, 'edit'])->name('comics.edit');
 Route::put('/comics/{comic}', [ComicController::class, 'update'])->name('comics.update');
+Route::delete('/comics{comic}', [ComicController::class, 'destroy'])->name('comics.destroy');
 //end comics rest
 Route::get('/movies', [PageController::class, 'movies'])->name('movies');
 Route::get('/tv', [PageController::class, 'tv'])->name('tv');
